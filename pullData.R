@@ -2,8 +2,7 @@
 require(RODBC)
 require(ggplot2)
 require(reshape2)
-#connect to the database (use Microsoft ODBC administrator)
-# https://www.youtube.com/watch?v=2xQX76nEdvo
+#connect to the database
 con <- odbcConnect("CS445 ODBC data source", uid="saon", pwd="CS445project")
 #currently pull all the data from the database TODO:create specific queries
 #returns the table as a data.frame with 11 variables/columns
