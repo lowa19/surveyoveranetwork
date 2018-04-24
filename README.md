@@ -1,8 +1,10 @@
 # surveyoveranetwork
 
 HOW TO CONNECT TO THE DATABASE
+https://www.youtube.com/watch?v=2xQX76nEdvo
 1. Microsoft ODBC Data Source Administrator
 2. Download the ODBC Driver 11 for SQL Server (if needed)
+https://www.microsoft.com/en-us/download/details.aspx?id=36434
 3. Click "Add"
 4. Name: "CS445 ODBC data source"
 5. Server: "saon.database.windows.net"
