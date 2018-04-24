@@ -15,3 +15,5 @@ https://www.microsoft.com/en-us/download/details.aspx?id=36434
 10. Under "Change the default database to:", choose "SAoN"
 11. Click "Next"
 12. Click "Finish"
+13. Go to the database
+14. Under security or firewall settings add your IP address
