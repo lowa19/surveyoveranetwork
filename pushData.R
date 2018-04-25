@@ -12,4 +12,3 @@ names(df) <- c("studentID", "major", "school_major", "year", "credits_current", 
 
 #PUSH NEW DATA TO THE DATABASE
 sqlSave(con, df, tablename = "student", append = TRUE, rownames = FALSE) #change df later to the csv data frame
-
