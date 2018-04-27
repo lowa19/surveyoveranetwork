@@ -4,6 +4,8 @@ require(gridExtra)
 require(htmlwidgets)
 require(plotly)
 require(plyr)
+require(magrittr)
+require(ggplot2)
 #connect to the database
 con <- odbcConnect("CS445 ODBC data source", uid="saon", pwd="CS445project")
 #returns the table as a data.frame with 11 variables/columns
@@ -25,10 +27,10 @@ groupbar <- plot_ly(yeardf, x = schools, y = ~FRgpa$x, type = 'bar', name = 'Fre
   add_trace(y = ~SOgpa$x, name = 'Sophomore') %>%
   add_trace(y = ~JUgpa$x, name = 'Junior') %>%
   add_trace(y = ~SEgpa$x, name = 'Senior') %>%
-  layout(yaxis = list(title = 'Average GPA'), barmode = 'group')
+  layout(title = 'GPAs by School and Year', yaxis = list(title = 'Average GPA'), barmode = 'group')
 
 # Histogram using plotly
-hist <- plot_ly(x = testdf$gpa, type = "histogram")
+hist <- plot_ly(x = testdf$gpa, type = "histogram") %>% layout(title= 'Distribution of GPAs')
 
 # Plot pie chart using plotly
 pie <- plot_ly(testdf, labels = count(testdf$major)$x, values = count(testdf$major)$freq, type = 'pie') %>%
@@ -40,4 +42,4 @@ pie <- plot_ly(testdf, labels = count(testdf$major)$x, values = count(testdf$maj
 # htmlwidgets::saveWidget(as_widget(p), selfcontained = TRUE, file = "~/Google Drive/Studie/MBA 2 2017-2018/Computer Networks and Internetworking/SAoN/graph.html")
 
 # Export multiple widgets to html
-htmltools::save_html(list(as_widget(pie), as_widget(hist), as_widget(groupbar)), file = "~/Google Drive/Studie/MBA 2 2017-2018/Computer Networks and Internetworking/SAoN/graph.html")
+htmltools::save_html(list(as_widget(pie), as_widget(hist), as_widget(groupbar)), file = "C:\\Users\\Kaleo\\Documents\\GitHub\\surveyoveranetwork\\graph.html")

@@ -3,7 +3,7 @@ require(RODBC)
 con <- odbcConnect("CS445 ODBC data source", uid="saon", pwd="CS445project")
 
 #CODE TO READ FROM A CSV FILE
-inputs <- read.csv(file = "test.csv", header = TRUE, sep = ",") #need to change file path later
+inputs <- read.csv(url("https://www.something.com"), header = TRUE, sep = ",") #need to change file path later
 inputs <- data.frame(inputs) #convert to a data frame
 
 #sample data frame
