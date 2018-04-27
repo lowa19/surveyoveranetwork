@@ -1,2 +1,3 @@
-Username, Major, Credits, GPA
-myUsername, Biology, 12, 2.8
+studentID,major,school_major,year,credits_current,credits_taken,gpa,percentile_major,percentile_school,percentile_year,athlete_status
+1234567,music theory,arts and science,freshmen,15,15,3.0,.1,.1,.5,0
+
